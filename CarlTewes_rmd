@@ -1,0 +1,9 @@
+remind_me <- function(deadline, message = "Deadline reminder!"){
+  if (Sys.Date() < deadline){
+        time_until_dealine <- as.numeric(difftime(deadline,Sys.Date(), units = "d"))
+  Sys.sleep(time_until_dealine)
+  cat(message, "\n")
+}else{
+  cat("deadline has passed", "\n")
+  }
+}
